@@ -1,0 +1,40 @@
+c:\users\musa\documents\visual studio 2013\Projects\drcom v1\drcom v1\bin\Debug\drcom v1.exe.config
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\drcom v1.exe
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\drcom v1.pdb
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\obj\Debug\drcom_v1.Form1.resources
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\obj\Debug\drcom_v1.Properties.Resources.resources
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\obj\Debug\drcom v1.csproj.GenerateResource.Cache
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\obj\Debug\drcom v1.exe
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\obj\Debug\drcom v1.pdb
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\obj\Debug\drcom_v1.Setting.resources
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\obj\Debug\drcom_v1.Plane.resources
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\Emgu.CV.UI.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\Emgu.CV.UI.GL.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\Emgu.CV.World.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\OpenTK.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\OpenTK.GLControl.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\ZedGraph.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\Emgu.CV.UI.GL.xml
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\Emgu.CV.World.xml
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\OpenTK.xml
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\OpenTK.GLControl.xml
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\ZedGraph.xml
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\DirectShowLib.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\DirectShowLib.pdb
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\GMap.NET.Core.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\Musa\Documents\Visual Studio 2013\Projects\drcom v1\drcom v1\obj\Debug\drcom v1.csprojResolveAssemblyReference.cache
