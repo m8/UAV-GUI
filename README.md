@@ -1,4 +1,8 @@
 # DRCOM #
+
+![sc1](https://user-images.githubusercontent.com/19881231/35024360-1972d9a6-fb50-11e7-81cd-96dc87809e42.JPG)
+
+
 The project has a three main controllers.
 
 -GUI
