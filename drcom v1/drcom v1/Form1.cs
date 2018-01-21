@@ -67,6 +67,7 @@ namespace drcom_v1
 
             DsDevice[] _SystemCamereas = DsDevice.GetDevicesOfCat(FilterCategory.VideoInputDevice);
             WebCams = new Video_Device[_SystemCamereas.Length];
+
             for (int i = 0; i < _SystemCamereas.Length; i++)
             {
                 WebCams[i] = new Video_Device() { Id = i, Name = _SystemCamereas[i].Name, ClassID = _SystemCamereas[i].ClassID }; //fill web cam array
@@ -98,7 +99,6 @@ namespace drcom_v1
             gMapControl1.MaxZoom = 23;
             gMapControl1.Zoom = 5;
             gMapControl1.AutoScroll = true;
-
         }
 
 
@@ -127,7 +127,6 @@ namespace drcom_v1
         {
             draw = false;
         }
-
 
 
         private void pictureBox3_Paint(object sender, PaintEventArgs e)
@@ -172,11 +171,6 @@ namespace drcom_v1
 
 
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void setSerialPort(SerialPort port)
         {
             serialPort1 = port;
@@ -184,14 +178,15 @@ namespace drcom_v1
             serialPort1.DataReceived += serialPort1_DataReceived;
         }
         int imageUpdate = 0;
+
+
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
 
             string orgReceived = serialPort1.ReadLine();
             string serialReceived = orgReceived.TrimStart('\0').TrimEnd('\r');
-            //Console.WriteLine(serialReceived);
-            //textBox1.Invoke((MethodInvoker)(() => textBox1.Text = serialReceived));
-            //string[] split = serialReceived.Split(new Char[] { '\r', '\n', '\\',' ' });
+     
+
             int value;
             imageUpdate++;
             if (int.TryParse(serialReceived, out value))
@@ -204,24 +199,62 @@ namespace drcom_v1
                 }
 
             }
-            //if (serialReceived != null)
-            //{
-            //    try
-            //    {
-            //        if (!string.IsNullOrWhiteSpace(serialReceived))
-            //        {
-            //            int rowAngle = Convert.ToInt32(serialReceived);
-            //            Console.WriteLine(rowAngle);
-            //            //rowAngle = -rowAngle;
-            //            //pictureBox2.Image = RotateImage(global::drcom_v1.Properties.Resources.Horizon_GroundSky, rowAngle);
-            //        }
-            //    }
-            //    catch
-            //    {
-
-            //    }
-            //}
+          
         }
+       
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            dt.Rows.Add(textBox1.Text, Convert.ToDouble(textBox2.Text), Convert.ToDouble(textBox3.Text));
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)  //Get camera viwe
+        {
+            capture = new Emgu.CV.Capture(comboBox1.SelectedIndex);
+            capture.QueryFrame();
+            Application.Idle += new EventHandler(ProcessFrame);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e) //Get available map providers
+        {
+            string map = comboBox2.Text;
+            var provider = GMapProviders.List.Where(x => x.Name == map).FirstOrDefault();
+            gMapControl1.MapProvider = provider;
+
+        }
+
+        private void button12_Click(object sender, EventArgs e) //Delete Position
+        {
+            dataGridView1.Rows.RemoveAt(fileSale); 
+
+        }
+
+       
+
+        private void gMapControl1_MouseDoubleClick(object sender, MouseEventArgs e) //Get len, long and write in the textb. 
+        {
+            double lng = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lng;
+            double lat = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lat;
+
+            textBox2.Text = lat.ToString();
+            textBox3.Text = lng.ToString();
+        }
+
+        private void addMarker(double lat, double lng)  //Add marker in map
+        {
+            GMapOverlay markersOverlay = new GMapOverlay("markers");
+            GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(lng, lat),
+              GMarkerGoogleType.green);
+            markersOverlay.Markers.Add(marker);
+            gMapControl1.Overlays.Add(markersOverlay);
+        }
+
+
+
+        #region Rotate Tool
+
         public static Image RotateImage(Image img, float rotationAngle)
         {
             //create an empty Bitmap image
@@ -253,83 +286,7 @@ namespace drcom_v1
             return bmp;
         }
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-            dt.Rows.Add(textBox1.Text, Convert.ToDouble(textBox2.Text), Convert.ToDouble(textBox3.Text));
-
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            capture = new Emgu.CV.Capture(comboBox1.SelectedIndex);
-
-            capture.QueryFrame();
-            Application.Idle += new EventHandler(ProcessFrame);
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            string map = comboBox2.Text;
-
-            var provider = GMapProviders.List.Where(x => x.Name == map).FirstOrDefault();
-            gMapControl1.MapProvider = provider;
-
-        }
-
-        private void gMapControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gMapControl1_MouseClick(object sender, MouseEventArgs e)
-        {
-
-
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.RemoveAt(fileSale); //Konum silme
-
-        }
-
-        private void gMapControl1_DoubleClick(object sender, EventArgs e)
-        {
-            //Enlem ve boylam bilgilerinin alınması
-
-        }
-
-        private void gMapControl1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            double lng = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lng;
-            double lat = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lat;
-
-            //enlem ve boylamın textboxlara yazdırılması
-            textBox2.Text = lat.ToString();
-            textBox3.Text = lng.ToString();
-
-            //Marker pozisyonun ayarlanması
-            //addMarker(lat, lng);
-
-
-        }
-
-        private void addMarker(double lat, double lng)
-        {
-            GMapOverlay markersOverlay = new GMapOverlay("markers");
-            GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(lng, lat),
-              GMarkerGoogleType.green);
-            markersOverlay.Markers.Add(marker);
-            gMapControl1.Overlays.Add(markersOverlay);
-        }
-
-
+        #endregion
     }
 }
